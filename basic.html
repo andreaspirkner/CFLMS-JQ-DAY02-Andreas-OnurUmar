@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+	<style>
+		
+		.firstrow{
+			display: flex;
+			
+			
+		}
+
+		.secondrow{
+			display: flex;
+			
+			
+		}
+
+		.thirdrow{
+			display: flex;
+			
+			
+		}
+
+		img {
+			width: 250px;
+			height: 250px;
+		}
+
+
+	</style>
+</head>
+<body>
+
+<div class= "allelements">
+	<div class="firstrow">
+		<div class="present"><img src="present.png"></div>
+		<div class="1santa"><img src="santa.png"></div>
+		<div class="present"><img src="present.png"></div>
+	</div>
+	<div class="secondrow">
+		<div class="2santa"><img src="santa.png"></div>
+		<div class="present"><img src="present.png"></div>
+		<div class="3santa"><img src="santa.png"></div>
+	</div>
+	<div class="thirdrow">
+		<div class="present"><img src="present.png"></div>
+		<div class="bell" id="bellbaby"><img src="bells.png"></div>
+		<div class="4santa"><img src="santa.png"></div>
+	</div>
+</div>
+
+
+
+
+	<script>
+		$(document).ready(function() {
+      $('div.bell').on('click', function(eventObject) {
+        var eventType = eventObject.type; 
+        document.getElementById('bellbaby').innerHTML = " You clicked the bell "; 
+			});
+
+		});
+
+
+		$('.1santa').click(function() {
+        $(this).hide()
+    })
+
+		$('.2santa').click(function() {
+        $(this).hide()
+    })
+
+		$('.3santa').click(function() {
+        $(this).hide()
+    })
+		$('.4santa').click(function() {
+        $(this).hide()
+    })
+
+
+
+
+	</script>
+
+
+</body>
+</html>
