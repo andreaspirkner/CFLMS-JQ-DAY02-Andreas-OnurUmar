@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="name" content="content" charset="utf-8">
+	<title>basic1 1</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<style>
+	body{
+		font-family: "Roboto", sans-serif;
+		}
+	h1,h2{
+		text-align: center;
+		}
+		
+	.boxes{
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		}
+	
+    .box {
+            width: 170px;
+            height: 170px;
+            background-color: lightgrey;
+            margin: 10px;
+			box-shadow: 10px 5px 5px gold;
+    }
+    
+    </style>
+</head>
+<body>
+	
+	<h1>Click the pictures</h1>
+	<div class="boxes">
+        <div class="box"><img src="img/christmas-bell.png" alt="Chistmas Bell" width=170px heigt=170px></div><br>
+        <div class="box"><img src="img/gift-box.png" alt="Gift Box" width=170px heigt=170px></div><br>
+        <div class="box"><img src="img/santa-claus.png" alt="Santa Claus" width=170px heigt=170px></div>
+	</div>
+	<h2>See what you have clicked on</h2>
+    <script>
+
+    $(document).ready(function() {
+        $('.boxes img:eq(0)').on('click', function() {
+            $("h2").text("You clicked on Christmas Bell");
+		});
+		
+		$('.boxes img:eq(1)').on('click', function() {
+            $("h2").text("You clicked on Gift Box");
+        });
+			
+		$('.boxes img:eq(2)').on('click', function() {
+            $("h2").text("You clicked on Santa Claus");
+        });
+    });
+
+    </script>
+	
+
+</body>
+</html>
